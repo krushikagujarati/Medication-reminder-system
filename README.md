@@ -56,7 +56,7 @@ ELEVENLABS_API_KEY=your_elevenlabs_api_key
 
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/medication?retryWrites=true&w=majority
 
-CALLBACK_URL=https://your-ngrok-url/api
+CALLBACK_URL=https://your-ngrok-url/api/webhook
 
 ### 4. **Set Up Twilio**
 Log into Twilio Console
@@ -64,11 +64,11 @@ Log into Twilio Console
 - Go to Phone Numbers → Manage Numbers
 - Under "A Call Comes In" → Set URL to:
 ```
-https://<ngrok-url>/incoming-call
+https://<ngrok-url>/api/incoming-call
 ```
 - Under "Status Callback" → Set URL to:
 ```
-https://<ngrok-url>/call-status
+https://<ngrok-url>/api/webhook/call-status
 ```
 
 ### 5. **Set Up MongoDB**
@@ -95,7 +95,7 @@ ngrok http 5000
 Copy the https URL from Ngrok output and update .env:
 
 ```
-CALLBACK_URL=https://your-ngrok-url/api
+CALLBACK_URL=https://your-ngrok-url/api/webhook
 ```
 
 ---
@@ -107,7 +107,7 @@ POST /api/call
 ```
 curl -X POST https://your-ngrok-url/api/call \
 -H "Content-Type: application/json" \
--d '{"phoneNumber": "+14084663645"}'
+-d '{"phoneNumber": "+1408..."}'
 ```
 Example JSON:
 
