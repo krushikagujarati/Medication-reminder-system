@@ -158,3 +158,11 @@ Step 4: Verify MongoDB logs
 - Check callLogs in MongoDB
 - Confirm that call details and transcription are stored
 
+---
+
+## Images
+
+
+![Demo](./images/Console.png)
+
+![DB](./images/DB.png)
