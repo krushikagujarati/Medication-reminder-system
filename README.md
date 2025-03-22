@@ -113,7 +113,7 @@ Example JSON:
 
 ```
 {
-  "phoneNumber": "+14084663645"
+  "phoneNumber": "+1408..."
 }
 ```
 ---
